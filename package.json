@@ -1,0 +1,44 @@
+{
+  "name": "insert-html-webpack-plugin",
+  "version": "0.1.0",
+  "author": "neohan",
+  "description": "Auto insert js and css to html template",
+  "main": "dist/index.js",
+  "scripts": {
+    "babel": "babel src/index.js --out-dir dist"
+  },
+  "keywords": [
+    "html",
+    "webpack",
+    "plugin",
+    "insert",
+    "html-webpack-plugin",
+    "insert-html-webpack-plugin"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/neohan666/insert-html-webpack-plugin.git"
+  },
+  "peerDependencies": {
+    "html-webpack-plugin": "3.2.0"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.1.0"
+  }
+}
