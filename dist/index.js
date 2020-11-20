@@ -33,24 +33,13 @@ var InsertHtmlWebpackPlugin = /*#__PURE__*/function () {
 
       var scriptCode = '';
       jsList.forEach(function (v) {
-        var jsPath = '';
-        var srcUrl = '';
-
-        if (typeof v === 'string') {
-          jsPath = v;
-        } else if (v.path) {
-          jsPath = v.path;
-        } else if (v.url) {
-          srcUrl = v.url;
-        }
-
-        if (srcUrl) {
+        if (v.url) {
           scriptCode += "<script src=\"".concat(v.url, "\"></script>");
-        } else if (jsPath) {
+        } else if (v.path) {
           var str = '';
 
           try {
-            str = fs.readFileSync(path.join(process.cwd(), jsPath), 'utf-8').toString();
+            str = fs.readFileSync(path.join(process.cwd(), v.path), 'utf-8').toString();
           } catch (err) {
             console.log('js readFileSync error:', err);
           }
@@ -61,24 +50,13 @@ var InsertHtmlWebpackPlugin = /*#__PURE__*/function () {
 
       var linkStyleCode = '';
       cssList.forEach(function (v) {
-        var cssPath = '';
-        var hrefUrl = '';
-
-        if (typeof v === 'string') {
-          cssPath = v;
-        } else if (v.path) {
-          cssPath = v.path;
-        } else if (v.url) {
-          hrefUrl = v.url;
-        }
-
-        if (hrefUrl) {
+        if (v.url) {
           linkStyleCode += "<link rel=\"stylesheet\" href=\"".concat(v.url, "\"/>");
-        } else if (cssPath) {
+        } else if (v.path) {
           var str = '';
 
           try {
-            str = fs.readFileSync(path.join(process.cwd(), cssPath), 'utf-8').toString();
+            str = fs.readFileSync(path.join(process.cwd(), v.path), 'utf-8').toString();
           } catch (err) {
             console.log('css readFileSync error:', err);
           }

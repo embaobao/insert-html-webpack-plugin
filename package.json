@@ -1,8 +1,8 @@
 {
   "name": "insert-html-webpack-plugin",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "neohan",
-  "description": "Auto insert js and css to html template",
+  "description": "Auto insert js and css into html template",
   "main": "dist/index.js",
   "scripts": {
     "babel": "babel src/index.js --out-dir dist"
@@ -23,11 +23,9 @@
     "type": "git",
     "url": "git://github.com/neohan666/insert-html-webpack-plugin.git"
   },
-  "peerDependencies": {
-    "html-webpack-plugin": "3.2.0"
-  },
   "dependencies": {
     "fs": "0.0.1-security",
+    "html-webpack-plugin": "^3.2.0",
     "path": "^0.12.7"
   },
   "devDependencies": {
