@@ -1,6 +1,6 @@
 {
   "name": "insert-html-webpack-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "neohan",
   "description": "Auto insert js and css into html template",
   "main": "dist/index.js",
