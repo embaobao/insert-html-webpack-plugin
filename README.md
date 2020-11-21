@@ -40,8 +40,8 @@ new InsertHtmlWebpackPlugin(
 ```
 + path属性值为相对于webpack命令运行目录（一般是项目根目录）的路径
 + url属性值会直接赋值为script标签src属性（用于js）或link标签的href属性（用于css）的值
-+ js是默认插入到html模板字符串的'<body>'后面
-+ css是默认插入到html模板字符串的'</title>'后面
++ js是默认插入到html模板字符串的"\<body>"后面
++ css是默认插入到html模板字符串的"\</title>"后面
 
 ### 4、示例说明（Example）
 #### （1）使用js
@@ -96,4 +96,4 @@ new InsertHtmlWebpackPlugin({
 
 ### 5、注意点（Warnings）
 + 插入的js或css不会再经过webpack的任何处理，所以在插入之前请检查待插入的代码兼容性。
-+ 由于依赖html-webpack-plugin插件，有些版本可能不支持，推荐版本：html-webpack-plugin@3.2.0
++ 由于依赖html-webpack-plugin插件，有些html-webpack-plugin版本可能不支持，推荐版本：html-webpack-plugin@3.2.0
